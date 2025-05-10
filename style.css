@@ -1,0 +1,353 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  color: #030101; /* Black text color on dark background */
+  background-color: #000; /* Black background for the page */
+}
+
+/* Header */
+header {
+  background-color: #e74c3c; /* Red background for header */
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .logo {
+  height: 40px;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+header nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 8rem 1rem;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-text .btn {
+  padding: 1rem 2rem;
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text .btn:hover {
+  background: #d63a28;
+  transform: translateY(-5px);
+}
+
+/* Gallery Section */
+#gallery {
+  background-color: #f8f8f8;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #e74c3c; /* Red background for footer */
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+footer .footer-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+footer .footer-grid div {
+  max-width: 300px;
+}
+
+footer .footer-grid h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+footer .footer-grid p {
+  font-size: 1rem;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Rooms Page */
+.room-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+}
+
+.room {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.room:hover {
+  transform: translateY(-5px);
+}
+
+.room img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.room h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.room p {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Booking Page */
+.booking-main {
+  background: #f8f8f8;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+.btn-book {
+  background: #e74c3c;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-book:hover {
+  background: #d63a28;
+  transform: translateY(-5px);
+}
+
+/* Contact Page */
+.contact-form {
+  background: white;
+  padding: 3rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+.contact-form button {
+  background: #e74c3c;
+  color: black;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #d63a28;
+  transform: translateY(-5px);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .room-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .btn-book,
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+/* === Booking Page Background Image === */
+body.booking-page {
+  background-image: url('image folder/bedroom.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.booking-main {
+  background: transparent;
+}
+
+.form-card {
+  background-color: rgba(245, 242, 242, 0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
